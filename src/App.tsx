@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-
+import CounterPage from "Counter_page";
 const App = () => {
   return (
     <div
@@ -17,9 +17,8 @@ const App = () => {
           align-items: center;
         `}
       >
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <CounterPage></CounterPage>
+        {/* Edit <code>src/App.tsx</code> and save to reload. */}
       </div>
     </div>
   );
