@@ -21,6 +21,15 @@ body * {
   height: 100vh;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -167,12 +176,13 @@ body * {
 }
 .section_3 {
   display: flex;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   padding: 0.5rem 0;
   background-color: #ffffff;
   border-radius: 0.5rem;
   overflow: hidden;
   border: solid 0.063rem #000000;
+  font-size: 22px;
 }
 .section_4 {
   margin-left: 0.5rem;
@@ -216,3 +226,19 @@ span {
 /* span .Counter_page_font_1__QN13c {
   color: red;
 } */
+.input1 {
+  height: 20px;
+}
+.text-wrapper {
+  cursor: pointer;
+}
+
+.text-wrapper {
+  /* display: inline-block; 将元素设置为块级元素 */
+
+  transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
+}
+
+.text-wrapper:active {
+  transform: scale(0.9); /* 缩小 10% 的效果 */
+}

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 // import { useNavigate } from 'react-router-dom';
 import styles from "./Counter_page.module.css";
 
 export default function Counter_page() {
   // const history = useHistory();
+  const [number, setNumber] = useState(0);
 
+  const handleClick = () => {
+    setNumber(number + 1);
+  };
   // const data = {};
 
   return (
@@ -29,15 +33,19 @@ export default function Counter_page() {
         <span className={`self-start ${styles["font_1"]} ${styles["text_2"]}`}>
           Input a number:
         </span>
-        <div
+        <input
+          type="number"
+          value={number}
+          onChange={(e) => setNumber(Number(e.target.value))}
+          placeholder=""
+          autoComplete="off"
           className={`flex-col justify-start items-start ${styles["section_3"]}`}
-        >
-          <div className={`shrink-0 ${styles["section_4"]}`}></div>
-        </div>
+        ></input>
         <div
           className={`flex-col justify-start items-center self-center ${styles["text-wrapper"]}`}
+          onClick={handleClick}
         >
-          <span className={`${styles["font_1"]} ${styles["text_3"]}`}>
+          <span className={`${styles["font_1"]} ${styles["text_3"]} $`}>
             Increase one
           </span>
         </div>
